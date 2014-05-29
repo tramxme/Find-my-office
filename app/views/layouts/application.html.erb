@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find-My-Office</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- Navbar begins -->
+  <%= nav_bar :responsive => true, :brand => "Find-My-Office" do %>
+    <div class="navbar-search pull-right"><%= render "teachers/search_form" %> </div>
+  <% end %>
+<!--Navbar ends-->
+  <div class='container'>
+    <%= yield %>
+  </div>
+</body>
+</html>

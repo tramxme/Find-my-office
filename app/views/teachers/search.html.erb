@@ -1,0 +1,25 @@
+<% if @list_teachers.empty? %>
+  <p>Sorry no information for this teacher is available at the moment. 
+  Please check back later or contact us to add your teacher into the list</p>
+<% else %>
+  <table class="table table-hover">
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Office address</th>
+      <th>Email address</th>
+      <th>Phone number</th>
+    </tr>
+    <% @list_teachers.each do |teacher| %>
+      <tr onclick="window.document.location='/teachers/<%=teacher.id%>';">
+        <td><%= teacher.last_name %>, <%= teacher.first_name %></td>
+        <td><%= teacher.department %></td>
+        <td><%= teacher.office_address %></td>
+        <td><%= teacher.email_address %></td>
+        <td><%= teacher.phone_number %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<%= link_to "Add a new teacher", new_teacher_path, method: :get %>
+

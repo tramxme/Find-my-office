@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  teacher_name: MyString
+  date: 2014-05-26
+  time: 2014-05-26 13:46:20
+
+two:
+  teacher_name: MyString
+  date: 2014-05-26
+  time: 2014-05-26 13:46:20

@@ -1,0 +1,32 @@
+<div class='container'>
+  <%= form_for @teacher do |f| %>
+    <p>
+      <%= f.label "Last Name" %>
+      <%= f.text_field :last_name %>
+    </p>
+    <p>
+      <%= f.label "First Name" %><br>
+      <%= f.text_field :first_name %>
+    </p>
+    <p>
+      <%= f.label "Department" %><br>
+      <%= f.text_field :department %>
+    </p>
+    <p>
+      <%= f.label "Office" %><br>
+      <%= f.text_area :office_address %>
+    </p>
+    <p>
+      <%= f.label "Email" %><br>
+      <%= f.text_field :email_address %>
+    </p>
+    <p>
+      <%= f.label "Phone number" %><br>
+      <%= f.text_field :phone_number %>
+    </p>
+    <p>
+      <%= f.submit "Create" %>
+      <%= link_to "Cancel", root_path %>
+    </p>
+  <% end %>
+</div>
