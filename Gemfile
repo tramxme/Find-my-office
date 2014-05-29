@@ -47,4 +47,4 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-ruby "2.0.0p195"
+ruby "2.0.0"
