@@ -1,4 +1,12 @@
 class TeachersController < ApplicationController
+  before_filter :admin_required 
+
+  def admin_required
+    if current_user.nil? || current_user.observer?
+      redirect_to new_user_session_path 
+    end
+    flash[:notice] = "Sorry you're not authorized for this action"
+  end
 
   def index
     @teachers = Teacher.all
@@ -21,7 +29,7 @@ class TeachersController < ApplicationController
       else
         format.html { render action: 'new' }
         format.json { render json: @teacher.errors, status: :unprocessable_entity }
-      end
+        end
     end
   end
 

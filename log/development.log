@@ -14451,3 +14451,1077 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-29 01:19:36 -05
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 01:19:36 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 01:02:27 -0500
+
+ActiveRecord::PendingMigrationError - Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.:
+  activerecord (4.0.4) lib/active_record/migration.rb:383:in `check_pending!'
+  activerecord (4.0.4) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__1136290059997456430__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.4) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.4) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.4) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.4) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/70293280594400/variables" for 127.0.0.1 at 2014-05-30 01:02:31 -0500
+  [1m[36m (1905.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (287.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (27.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTeachers (20140526190959)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (188.4ms)[0m  [1mCREATE TABLE "teachers" ("id" serial primary key, "last_name" character varying(255), "first_name" character varying(255), "department" character varying(255), "office_address" character varying(255), "email_address" character varying(255), "phone_number" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (85.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140526190959"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 01:03:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "teachers"
+  Rendered welcome/index.html.erb within layouts/application (56.0ms)
+  Rendered teachers/_search_form.html.erb (1.3ms)
+Completed 200 OK in 2090ms (Views: 1799.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/teachers.css?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:20 -0500
+
+
+Started GET "/assets/teachers.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:20 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 01:03:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateAdmins (20140530062835)
+  [1m[35m (1.5ms)[0m  BEGIN
+  [1m[36m (94.9ms)[0m  [1mCREATE TABLE "admins" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")
+  [1m[36m (3.0ms)[0m  [1mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (23.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140530062835"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 01:36:28 -0500
+
+NoMethodError - undefined method `devise' for #<Class:0x007fdcdc3e9e58>:
+  activerecord (4.0.4) lib/active_record/dynamic_matchers.rb:22:in `method_missing'
+  app/models/admin.rb:4:in `<class:Admin>'
+  app/models/admin.rb:1:in `<top (required)>'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:566:in `constantize'
+  devise (3.2.4) lib/devise.rb:297:in `get'
+  devise (3.2.4) lib/devise/mapping.rb:77:in `to'
+  devise (3.2.4) lib/devise/mapping.rb:72:in `modules'
+  devise (3.2.4) lib/devise/mapping.rb:89:in `routes'
+  devise (3.2.4) lib/devise/mapping.rb:156:in `default_used_route'
+  devise (3.2.4) lib/devise/mapping.rb:66:in `initialize'
+  devise (3.2.4) lib/devise.rb:331:in `new'
+  devise (3.2.4) lib/devise.rb:331:in `add_mapping'
+  devise (3.2.4) lib/devise/rails/routes.rb:221:in `block in devise_for'
+  devise (3.2.4) lib/devise/rails/routes.rb:220:in `each'
+  devise (3.2.4) lib/devise/rails/routes.rb:220:in `devise_for'
+  config/routes.rb:2:in `block in <top (required)>'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:335:in `instance_exec'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:335:in `eval_block'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:313:in `draw'
+  config/routes.rb:1:in `<top (required)>'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `block in load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:214:in `load_dependency'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `load'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.4) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.4) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.4) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:407:in `_run__2977222644089265832__prepare__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.4) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.4) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.4) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.4) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/70293282332260/variables" for 127.0.0.1 at 2014-05-30 01:36:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateAdmins (20140530062835)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (106.8ms)[0m  DROP INDEX "index_admins_on_reset_password_token"
+  [1m[36m (0.5ms)[0m  [1mDROP INDEX "index_admins_on_email"[0m
+  [1m[35m (64.4ms)[0m  DROP TABLE "admins"
+  [1m[36mSQL (26.5ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20140530062835'[0m
+  [1m[35m (27.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20140530064158)
+  [1m[35m (1.6ms)[0m  BEGIN
+  [1m[36m (13.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140530064158"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 01:58:55 -0500
+
+NoMethodError - undefined method `devise' for #<Class:0x007fdcd94513a8>:
+  activerecord (4.0.4) lib/active_record/dynamic_matchers.rb:22:in `method_missing'
+  app/models/user.rb:4:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:566:in `constantize'
+  devise (3.2.4) lib/devise.rb:297:in `get'
+  devise (3.2.4) lib/devise/mapping.rb:77:in `to'
+  devise (3.2.4) lib/devise/mapping.rb:72:in `modules'
+  devise (3.2.4) lib/devise/mapping.rb:89:in `routes'
+  devise (3.2.4) lib/devise/mapping.rb:156:in `default_used_route'
+  devise (3.2.4) lib/devise/mapping.rb:66:in `initialize'
+  devise (3.2.4) lib/devise.rb:331:in `new'
+  devise (3.2.4) lib/devise.rb:331:in `add_mapping'
+  devise (3.2.4) lib/devise/rails/routes.rb:221:in `block in devise_for'
+  devise (3.2.4) lib/devise/rails/routes.rb:220:in `each'
+  devise (3.2.4) lib/devise/rails/routes.rb:220:in `devise_for'
+  config/routes.rb:2:in `block in <top (required)>'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:335:in `instance_exec'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:335:in `eval_block'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:313:in `draw'
+  config/routes.rb:1:in `<top (required)>'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `block in load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:214:in `load_dependency'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `load'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.4) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.4) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.4) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:407:in `_run__2977222644089265832__prepare__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.4) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.4) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.4) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.4) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/70293262556120/variables" for 127.0.0.1 at 2014-05-30 01:58:55 -0500
+
+
+Started POST "/__better_errors/70293262556120/variables" for 127.0.0.1 at 2014-05-30 01:59:05 -0500
+
+
+Started POST "/__better_errors/70293262556120/variables" for 127.0.0.1 at 2014-05-30 01:59:09 -0500
+
+
+Started POST "/__better_errors/70293262556120/variables" for 127.0.0.1 at 2014-05-30 01:59:11 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 01:59:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.:
+  activerecord (4.0.4) lib/active_record/migration.rb:383:in `check_pending!'
+  activerecord (4.0.4) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__1271333929962324466__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.4) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.4) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.4) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.4) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/70170063881940/variables" for 127.0.0.1 at 2014-05-30 01:59:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRoleToUsers (20140530065051)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (83.0ms)[0m  [1mALTER TABLE "users" ADD COLUMN "role" character varying(255) DEFAULT 'observer'[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140530065051"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 02:00:09 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "teachers"[0m
+  Rendered welcome/index.html.erb within layouts/application (10.9ms)
+  Rendered teachers/_search_form.html.erb (1.2ms)
+Completed 200 OK in 422ms (Views: 377.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/teachers.css?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/teachers.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-30 02:00:10 -0500
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2014-05-30 02:00:12 -0500
+Processing by TeachersController#new as HTML
+  Parameters: {"authenticity_token"=>"1aD4bEiDqTBO8wQhWAMM1zNDZTc1nyl7WRJxZjwuCOE="}
+Completed 500 Internal Server Error in 16ms
+
+NoMethodError - undefined method `admin?' for nil:NilClass:
+  app/controllers/teachers_controller.rb:5:in `admin_required'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:407:in `_run__1021639824842968097__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__1271333929962324466__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  thin (1.6.2) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.2) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.2) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.2) lib/thin/connection.rb:53:in `process'
+  thin (1.6.2) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.2) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.2) lib/thin/server.rb:162:in `start'
+  rack (1.5.2) lib/rack/handler/thin.rb:16:in `run'
+  rack (1.5.2) lib/rack/server.rb:264:in `start'
+  railties (4.0.4) lib/rails/commands/server.rb:84:in `start'
+  railties (4.0.4) lib/rails/commands.rb:76:in `block in <top (required)>'
+  railties (4.0.4) lib/rails/commands.rb:71:in `tap'
+  railties (4.0.4) lib/rails/commands.rb:71:in `<top (required)>'
+  bin/rails:4:in `require'
+  bin/rails:4:in `<main>'
+
+
+
+Started POST "/__better_errors/70170085687600/variables" for 127.0.0.1 at 2014-05-30 02:00:12 -0500
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2014-05-30 02:02:12 -0500
+Processing by TeachersController#new as HTML
+  Parameters: {"authenticity_token"=>"1aD4bEiDqTBO8wQhWAMM1zNDZTc1nyl7WRJxZjwuCOE="}
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :admin_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-30 02:02:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (107.7ms)
+  Rendered teachers/_search_form.html.erb (0.5ms)
+Completed 200 OK in 197ms (Views: 136.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/teachers.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/teachers.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:13 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 02:02:18 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "teachers"
+  Rendered welcome/index.html.erb within layouts/application (7.7ms)
+  Rendered teachers/_search_form.html.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 33.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/teachers.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/teachers.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:19 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "teachers"[0m
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+  Rendered teachers/_search_form.html.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 18.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/teachers.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/teachers.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:45 -0500
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+Processing by TeachersController#new as HTML
+  Parameters: {"authenticity_token"=>"1aD4bEiDqTBO8wQhWAMM1zNDZTc1nyl7WRJxZjwuCOE="}
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :admin_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+  Rendered teachers/_search_form.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 28.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/teachers.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/teachers.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:49 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:50 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 02:02:53 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "teachers"
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  Rendered teachers/_search_form.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/teachers.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/teachers.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 02:02:54 -0500
