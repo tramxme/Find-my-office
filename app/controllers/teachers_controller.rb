@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  before_filter :admin_required 
+  before_filter :admin_required, :only => [:new, :create] 
 
   def admin_required
     if current_user.nil? || current_user.observer?
