@@ -7,7 +7,9 @@ emails and phone numbers.
   [X] Set validation for teacher's input data (email validation, phone number)
   [X] Authorization/Set restricted user access (Only Admins can add information)
   [X] Make email and phone clickable
-  [ ] A mobile-friendly version
+  [X] A mobile-friendly version (Using dudamobile)
   [ ] Improve UI
   [ ] Allow users to search by teachers' names, institutions and departments.
   [ ] Allow admins to upload teachers' profiles
+=====================
+Use the app here: http://calm-lowlands-3297.herokuapp.com/
