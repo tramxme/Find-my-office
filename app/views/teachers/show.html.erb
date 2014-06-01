@@ -5,6 +5,10 @@
     <td><%= @teacher.last_name %>, <%= @teacher.first_name %></td>
   </tr>
   <tr>
+    <th>Institute :</th>
+    <td><%= @teacher.institute.name %></td>
+  </tr>
+  <tr>
     <th>Department :</th>
     <td><%= @teacher.department %></td>
   </tr>
@@ -14,11 +18,11 @@
   </tr>
   <tr>
     <th>Email address :</th>
-    <td><%= @teacher.email_address %> </td>
+    <td><a href="mailto:<%= @teacher.email_address %>"><%= @teacher.email_address %></a></td>
   </tr>
   <tr>
     <th>Phone number :</th>
-    <td><%= @teacher.phone_number %></td>
+    <td><a href="tel:<%= @teacher.phone_number %>"><%= @teacher.phone_number %></a></td>
   </tr>
 </table>
 <%= button_to "Remove this teacher", teacher_path(@teacher), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>

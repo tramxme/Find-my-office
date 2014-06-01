@@ -6,6 +6,7 @@ gem 'devise'
 gem 'therubyracer'
 gem "twitter-bootstrap-rails"
 gem 'less-rails' # For twitter bootstrap
+gem 'email_validator' # validate email format
 
 group :production do
   gem "pg"

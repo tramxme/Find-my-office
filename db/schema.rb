@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140530065051) do
+ActiveRecord::Schema.define(version: 20140601035747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "institutes", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "teachers", force: true do |t|
     t.string   "last_name"
@@ -25,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140530065051) do
     t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "institute_id"
   end
 
   create_table "users", force: true do |t|

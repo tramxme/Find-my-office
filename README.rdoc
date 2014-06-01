@@ -2,8 +2,12 @@ This application allows students to search for information about their teachers'
 emails and phone numbers. 
 ==========================
 
-  [ ] Create Institute model (name, address)
-  [ ] Set validation for input data
+  [X] Create Institute model (name, address, city, state, zipcode)
+  [X] Set validation for institute's input data (zipcode)
+  [X] Set validation for teacher's input data (email validation, phone number)
   [X] Authorization/Set restricted user access (Only Admins can add information)
-  [ ] A mobile-friendly-version
+  [X] Make email and phone clickable
+  [ ] A mobile-friendly version
   [ ] Improve UI
+  [ ] Allow users to search by teachers' names, institutions and departments.
+  [ ] Allow admins to upload teachers' profiles

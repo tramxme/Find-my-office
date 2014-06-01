@@ -1,0 +1,29 @@
+<div class='container'>
+  <%= form_for @institute do |f| %>
+  <%= render 'shared/error_message', target: @institute %>
+    <p>
+      <%= f.label "School Name" %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label "School Address" %><br>
+      <%= f.text_field :address %>
+    </p>
+    <p>
+      <%= f.label "City" %><br>
+      <%= f.text_area :city %>
+    </p>
+    <p>
+      <%= f.label "State" %><br>
+      <%= f.text_field :state %>
+    </p>
+    <p>
+      <%= f.label "Zipcode" %><br>
+      <%= f.text_field :zipcode %>
+    </p>
+    <p>
+      <%= f.submit "Create" %>
+      <%= link_to "Cancel", root_path %>
+    </p>
+  <% end %>
+</div>

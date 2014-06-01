@@ -1,0 +1,27 @@
+<h1>Institute</h1>
+  <table class="table table-striped" >
+  <tr>
+    <th>School Name :</th>
+    <td><%= @institute.name %></td>
+  </tr>
+  <tr>
+    <th>Address :</th>
+    <td><%= @institute.address %></td>
+  </tr>
+  <tr>
+    <th>City :</th>
+    <td><%= @institute.city %></td>
+  </tr>
+  <tr>
+    <th>State :</th>
+    <td><%= @institute.state %></a></td>
+  </tr>
+  <tr>
+    <th>Zipcode :</th>
+    <td><%= @institute.zipcode %></a></td>
+  </tr>
+</table>
+<%= button_to "Remove this institute", institute_path(@institute), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+<%= link_to "Add a new teacher", new_institute_teacher_path(@institute), method: :get %></br>
+<%= link_to "Edit Profile", edit_institute_path(@institute), method: :get %></br>
+<%= link_to "Back to list", root_path %>

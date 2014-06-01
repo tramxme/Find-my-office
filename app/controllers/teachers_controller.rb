@@ -4,24 +4,24 @@ class TeachersController < ApplicationController
   def admin_required
     if current_user.nil? || current_user.observer?
       redirect_to new_user_session_path 
+      flash[:notice] = "You need to be an admin to add new information"
     end
     flash[:notice] = "Sorry you're not authorized for this action"
   end
 
   def index
-    @teachers = Teacher.all
+    @institute = Institute.find(params[:institute_id])
+    @teachers = @institute.teachers.all
   end
   
   def new
-    @teacher = Teacher.new
-  end
-
-  def edit
-    @teacher = Teacher.find(params[:id])
+    @institute = Institute.find(params[:institute_id])
+    @teacher = @institute.teachers.new
   end
 
   def create
-    @teacher = Teacher.new(teacher_params)
+    @institute = Institute.find(params[:institute_id])
+    @teacher = @institute.teachers.new(teacher_params)
     respond_to do |format|
       if @teacher.save
         format.html { redirect_to @teacher, notice: 'Office hour was successfully created.' }
@@ -31,6 +31,10 @@ class TeachersController < ApplicationController
         format.json { render json: @teacher.errors, status: :unprocessable_entity }
         end
     end
+  end
+
+  def edit
+    @teacher = Teacher.find(params[:id])
   end
 
   def update

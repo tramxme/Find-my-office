@@ -1,5 +1,6 @@
 <div class='container'>
-  <%= form_for @teacher do |f| %>
+  <%= form_for [@institute, @teacher] do |f| %>
+  <%= render 'shared/error_message', target: @teacher %>
     <p>
       <%= f.label "Last Name" %>
       <%= f.text_field :last_name %>
