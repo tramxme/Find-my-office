@@ -1,7 +1,8 @@
 <% if @list_teachers.empty? %>
   <p>Sorry no information for this teacher is available at the moment. 
-  Please check back later or contact us to add your teacher into the list</p>
+  Please check back later or <a href='mailto:tbl.inbox[at]gmail.com'>contact us</a> to add your teacher into the list</p>
 <% else %>
+  <h4><%= @list_teachers.size %> result(s) found:</h4>
   <table class="table table-hover">
     <tr>
       <th>Name</th>

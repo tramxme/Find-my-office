@@ -3,19 +3,23 @@
   <p>Sorry no information is available at this moment. 
   Please check back later</p>
 <% else %>
+  <h4><%= @institutes.size %> institute(s) availabe</h4>
   <table class="table table-hover">
     <tr>
       <th>Name</th>
       <th>Address</th>
+      <th>No. of teachers on file</th>
     </tr>
     <% @institutes.each do |institute| %>
       <tr onclick="window.document.location='/institutes/<%=institute.id%>';">
         <td><%= institute.name %></td>
         <td><%= institute.address %>, <%= institute.city %>, <%= institute.state %>, <%= institute.zipcode %></td>
+        <td><%= institute.teachers.size %></td>
       </tr>
     <% end %>
   </table>
 <% end %>
+<%= link_to "Back", root_path %></br>
 <% if !current_user.nil? && current_user.admin? %>
   <%= link_to "Add a new school", new_institute_path, method: :get %></br>
   <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>

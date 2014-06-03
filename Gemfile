@@ -7,6 +7,7 @@ gem 'therubyracer'
 gem "twitter-bootstrap-rails"
 gem 'less-rails' # For twitter bootstrap
 gem 'email_validator' # validate email format
+gem "kaminari" # customizable and sophisticated paginator 
 
 group :production do
   gem "pg"
